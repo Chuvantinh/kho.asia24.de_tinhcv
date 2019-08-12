@@ -25,6 +25,7 @@ class Voxy_transfer extends manager_base
             "object" => " Nhập Hàng"
         );
     }
+
     public function index()
     {
         $this->manager();
@@ -143,11 +144,11 @@ class Voxy_transfer extends manager_base
             $this->session->set_userdata("search_string", "");
         }
 
-        $condition      = $this->input->post();
-        $search_string  = isset($condition["q"]) ? $condition["q"] : $this->session->userdata("search_string");
-        $limit          = intval(isset($condition["limit"]) ? $condition["limit"] : $this->session->userdata("limit"));
-        $order          = isset($condition["order"]) ? $condition["order"] : $this->session->userdata("order");
-        $currentPage    = intval(isset($condition["page"]) ? $condition["page"] : 0);
+        $condition = $this->input->post();
+        $search_string = isset($condition["q"]) ? $condition["q"] : $this->session->userdata("search_string");
+        $limit = intval(isset($condition["limit"]) ? $condition["limit"] : $this->session->userdata("limit"));
+        $order = isset($condition["order"]) ? $condition["order"] : $this->session->userdata("order");
+        $currentPage = intval(isset($condition["page"]) ? $condition["page"] : 0);
 
         if ($limit < 0) {
             $limit = 0;
@@ -155,22 +156,22 @@ class Voxy_transfer extends manager_base
 
         /* Nếu thay đổi số record hiển thị trên 1 trang hoặc thay đổi từ khóa tìm kiếm thì đặt lại thành trang 1 */
         if (($limit != $this->session->userdata("limit")) || ($search_string != $this->session->userdata("search_string"))) {
-            $currentPage    = 1;
+            $currentPage = 1;
         }
         $post = ($currentPage - 1) * $limit;
         if ($post < 0) {
-            $post           = 0;
-            $currentPage    = 1;
+            $post = 0;
+            $currentPage = 1;
         }
-        $orderData  = $this->_check_data_order_record($order);
-        $order      = $orderData["string_order"];
+        $orderData = $this->_check_data_order_record($order);
+        $order = $orderData["string_order"];
 
         $this->session->set_userdata("limit", $limit);
         $this->session->set_userdata("order", $order);
         $this->session->set_userdata("search_string", $search_string);
 
-        $totalItem  = -1;
-        $record     = $this->m_voxy_transfer->get_list_table($search_string, $where_condition, $limit, $post, $order, $totalItem);
+        $totalItem = -1;
+        $record = $this->m_voxy_transfer->get_list_table($search_string, $where_condition, $limit, $post, $order, $totalItem);
 
         if (isset($data['call_api']) && $data['call_api']) {
             // ko xu ly gi ca
@@ -190,21 +191,21 @@ class Voxy_transfer extends manager_base
             $total_page += 1;
         }
 
-        $link               = "#";
-        $data["pagging"]    = $this->_get_pagging($total_page, $currentPage, $this->pagging_item_display, $link);
-        $tempData           = $this->_add_colum_action($record);
-        $data               = array_merge($data, $tempData);
+        $link = "#";
+        $data["pagging"] = $this->_get_pagging($total_page, $currentPage, $this->pagging_item_display, $link);
+        $tempData = $this->_add_colum_action($record);
+        $data = array_merge($data, $tempData);
 
-        $data["key_name"]   = $this->data->get_key_name();
-        $data["limit"]      = $limit;
+        $data["key_name"] = $this->data->get_key_name();
+        $data["limit"] = $limit;
         $data["search_string"] = $search_string;
-        $data["from"]       = $post + 1;
-        $data["to"]         = $post + $limit;
+        $data["from"] = $post + 1;
+        $data["to"] = $post + $limit;
         if ($data["to"] > $totalItem) {
-            $data["to"]     = $totalItem;
+            $data["to"] = $totalItem;
         }
-        $data["total"]      = $totalItem;
-        $data["order"]      = $orderData["array_order"];
+        $data["total"] = $totalItem;
+        $data["order"] = $orderData["array_order"];
 
         $viewFile = "base_manager/default_table";
         if (file_exists(APPPATH . "views/" . $this->path_theme_view . $this->name["view"] . '/' . 'top10_import.php')) {
@@ -213,23 +214,23 @@ class Voxy_transfer extends manager_base
 
         if (isset($this->name["modules"]) && $this->name["modules"]) {
             if (file_exists(APPPATH . "modules/" . $this->name["modules"] . "/views/" . $this->name["view"] . '/' . 'top10_import.php')) {
-                $viewFile   = $this->name["view"] . '/' . 'table';
-                $content    = $this->load->view($viewFile, $data, true);
+                $viewFile = $this->name["view"] . '/' . 'table';
+                $content = $this->load->view($viewFile, $data, true);
             } else {
-                $content    = $this->load->view($this->path_theme_view . $viewFile, $data, true);
+                $content = $this->load->view($this->path_theme_view . $viewFile, $data, true);
             }
         } else {
             $content = $this->load->view($this->path_theme_view . $viewFile, $data, true);
         }
         if ($this->input->is_ajax_request()) {
             //$data_return["callback"]    = "get_manager_data_response";
-            $data_return["state"]       = 1;
-            $data_return["html"]        = $content;
+            $data_return["state"] = 1;
+            $data_return["html"] = $content;
             echo json_encode($data_return);
             return TRUE;
         }
     }
-    
+
     protected function get_search_condition_new($data = array())
     {
         if (!count($data)) {
@@ -238,7 +239,7 @@ class Voxy_transfer extends manager_base
 
         $where_data = array();
         $like_data = array();
-        $list_field = array('vendor','ngay_giao_hang','ngay_dat_hang', 'status');
+        $list_field = array('vendor', 'ngay_giao_hang', 'ngay_dat_hang', 'status');
         foreach ($list_field as $key => $value) {
             if (isset($data[$value])) {
                 $data[$value] = trim($data[$value]);
@@ -315,17 +316,17 @@ class Voxy_transfer extends manager_base
             }
 
             if (isset($record->mark_as_complete)) {
-                if ($record->mark_as_complete == "0"){
+                if ($record->mark_as_complete == "0") {
                     $record->mark_as_complete = "null";
-                }elseif ($record->mark_as_complete == "all") {
+                } elseif ($record->mark_as_complete == "all") {
                     $record->mark_as_complete = "Tất cả";
-                }elseif ($record->mark_as_complete == "Cho") {
+                } elseif ($record->mark_as_complete == "Cho") {
                     $record->mark_as_complete = "Chờ";
-                }elseif ($record->mark_as_complete == "Mot Phan") {
+                } elseif ($record->mark_as_complete == "Mot Phan") {
                     $record->mark_as_complete = "Một phần";
                 } elseif ($record->mark_as_complete == "Hoan Thanh") {
                     $record->mark_as_complete = "Hoàn thành";
-                }else {
+                } else {
 
                 }
             }
@@ -342,13 +343,13 @@ class Voxy_transfer extends manager_base
 
         $data_return["callback"] = isset($data['callback']) ? $data['callback'] : "get_form_add_response";
         if (!isset($data["save_link"])) {
-            $data["save_link"]  = site_url($this->name['class'] . '/add_save');
+            $data["save_link"] = site_url($this->name['class'] . '/add_save');
         }
         if (!isset($data["list_input"])) {
             $data["list_input"] = $this->_get_form();
         }
         if (!isset($data["title"])) {
-            $data["title"]      = $title = 'Thêm dữ liệu ' . $this->name['object'];
+            $data["title"] = $title = 'Thêm dữ liệu ' . $this->name['object'];
         }
 
         if (!isset($data["status"])) {
@@ -361,8 +362,8 @@ class Voxy_transfer extends manager_base
         }
         $content = $this->load->view($this->path_theme_view . $viewFile, $data, true);
         if ($this->input->is_ajax_request()) {
-            $data_return["state"]   = 1;
-            $data_return["html"]    = $content;
+            $data_return["state"] = 1;
+            $data_return["html"] = $content;
             echo json_encode($data_return);
             return TRUE;
         }
@@ -394,24 +395,24 @@ class Voxy_transfer extends manager_base
 
         $mswt = $data['mswt'];//1 brutto;2 netto
 
-        if(isset($data["information"])){
+        if (isset($data["information"])) {
             $list_product = array();//xu ly lai san pham add vao database
             $i = 0;
             $tongtien = 0;
-            foreach ($data["information"] as $item){
+            foreach ($data["information"] as $item) {
                 $i++;
 
                 $check_variant1 = $this->m_voxy_package->check_variant1($item['variant_id']);
                 $check_variant2 = $this->m_voxy_package->check_variant2($item['variant_id']);
-                if(isset($item['variant_id']) && $item['variant_id'] != ""){
+                if (isset($item['variant_id']) && $item['variant_id'] != "") {
                     $idnew = $this->m_voxy_package->get_id_from_variant($item['variant_id']);
-                }else {
+                } else {
                     $idnew = false;
                 }
 
                 if (isset($data["quantity"])) {
-                    foreach ($data["quantity"] as $key => $item_quantity){
-                        if($key == $item['variant_id']){
+                    foreach ($data["quantity"] as $key => $item_quantity) {
+                        if ($key == $item['variant_id']) {
                             $item["sl_nhap"] = $item_quantity;
                             //$list_product[$i] = $item;
                         }
@@ -419,17 +420,17 @@ class Voxy_transfer extends manager_base
                 }
 
                 if (isset($data["giabannew"])) {
-                    foreach ($data["giabannew"] as $key => $row){
-                        if($key == $item['variant_id']){
+                    foreach ($data["giabannew"] as $key => $row) {
+                        if ($key == $item['variant_id']) {
                             $item["giabannew"] = $row;
-                            if($item['giabannew'] != 0 || $item['giabannew'] != ""){
+                            if ($item['giabannew'] != 0 || $item['giabannew'] != "") {
                                 //update gia ban
                                 if ($check_variant1 == true) {
-                                    $this->m_voxy_package->update_giaban_le($idnew,$item['giabannew']);
+                                    $this->m_voxy_package->update_giaban_le($idnew, $item['giabannew']);
                                 }
 
                                 if ($check_variant2 == true) {
-                                    $this->m_voxy_package->update_giaban_si($idnew,$item['giabannew']);
+                                    $this->m_voxy_package->update_giaban_si($idnew, $item['giabannew']);
                                 }
 
                             }
@@ -439,106 +440,86 @@ class Voxy_transfer extends manager_base
 
 
                 if (isset($data["gianhapnew"])) {
-                    foreach ($data["gianhapnew"] as $key => $item_gianhapnew){
-                        if($key == $item['variant_id']){
+                    foreach ($data["gianhapnew"] as $key => $item_gianhapnew) {
+                        if ($key == $item['variant_id']) {
                             $item["gianhapnew"] = (double)$item_gianhapnew;
 
                             //if($item["gianhapnew"] != 0){
 
-                                //get ma so thue
-                                $masothue = $this->m_voxy_package->get_mwst($item['sku']);
-                                if($mswt == 1){//brutto
-                                    $price_steuer= (double)$item_gianhapnew;
-                                }else{//netto thi phai tinh ra brutto
-                                    $price_steuer = (double)$item_gianhapnew * ( 1 + ($masothue / 100) );
+                            //get ma so thue
+                            $masothue = $this->m_voxy_package->get_mwst($item['sku']);
+                            if ($mswt == 1) {//brutto
+                                $price_steuer = (double)$item_gianhapnew;
+                            } else {//netto thi phai tinh ra brutto
+                                $price_steuer = (double)$item_gianhapnew * (1 + ($masothue / 100));
+                            }
+                            //xu ly them phan gia trung binh
+
+                            if ($check_variant1 == true) {
+                                //gia von la gia mua
+                                $giavon = $this->m_voxy_package->get_gia_mua_le($idnew);
+                                $soluongle = $this->m_voxy_package->get_quantity_now_variant1($item['variant_id']);
+                                if($item['sl_nhap']  = 0 && $soluongle == 0){
+                                    $average_price = 0;
+                                }else{
+                                    $average_price = (((double)$giavon * (double)$soluongle) + ((double)$price_steuer * $item['sl_nhap'])) / ((double)$item['sl_nhap'] + (double)$soluongle);
                                 }
-                                //xu ly them phan gia trung binh
 
-                                if ($check_variant1 == true) {
-                                    //gia von la gia mua
-                                    //if($idnew != false){
-                                        $giavon = $this->m_voxy_package->get_gia_mua_le($idnew);
-                                        $soluongle = $this->m_voxy_package->get_quantity_now_variant1($item['variant_id']);
-                                    //}
-                                    //else{
-                                        //$giavon = 0;
-                                    //}
+                                $average_price_new = round($average_price, 2);
 
-                                  //  if($giavon <= 0 || $soluongle <= 0){//so bi am , lay so nhap vao
-                                       // $average_price = $price_steuer;
-                                  //  }else{//k bi am , thi tinh toan
-                                        $average_price = ( ((double)$giavon * (double)$soluongle) + ((double)$price_steuer * $item['sl_nhap']) ) / ((double)$item['sl_nhap'] + (double)$soluongle);
-                                  //  }
-                                    $average_price_new = round($average_price,2);
-
-                                    if($average_price_new <= 0){
-                                        if($item["gianhapnew"] < $giavon){
-                                            $average_price_new = $giavon;
-                                        }else{
-                                            $average_price_new = $item["gianhapnew"];
-                                        }
-                                    }else{
-                                        if($soluongle <= 0){
-                                            $average_price_new = $item["gianhapnew"];
-                                        }else{
-                                            $average_price_new = $average_price_new;
-                                        }
-
+                                if ($average_price_new <= 0) {
+                                    if ($item["gianhapnew"] < $giavon) {
+                                        $average_price_new = $giavon;
+                                    } else {
+                                        $average_price_new = $item["gianhapnew"];
+                                    }
+                                } else {
+                                    if ($soluongle <= 0) {
+                                        $average_price_new = $item["gianhapnew"];
+                                    } else {
                                         $average_price_new = $average_price_new;
                                     }
 
-                                    $item['average_price'] = $average_price_new;
-                                    $this->m_voxy_package->update_giavon_le($idnew,$item['average_price']);
+                                    $average_price_new = $average_price_new;
                                 }
 
+                                $item['average_price'] = $average_price_new;
+                                $this->m_voxy_package->update_giavon_le($idnew, $item['average_price']);
+                            }
 
+                            if ($check_variant2 == true) {
 
+                                $giavon_si = $this->m_voxy_package->get_gia_mua_si($idnew);
+                                $soluongsi = $this->m_voxy_package->get_quantity_now_variant2($item['variant_id']);
+                                if($item['sl_nhap']  = 0 && $soluongsi == 0){
+                                    $average_price_si = 0;
+                                }else{
+                                    $average_price_si = (((double)$giavon_si * $soluongsi) + ((double)$price_steuer * (double)$item['sl_nhap'])) / ((double)$item['sl_nhap'] + (double)$soluongsi);
+                                }
 
+                                $average_price_new_si = round($average_price_si, 2);
 
-                                if ($check_variant2 == true) {
-                                   // if($idnew != false){
-                                        $giavon_si = $this->m_voxy_package->get_gia_mua_si($idnew);
-                                        $soluongsi = $this->m_voxy_package->get_quantity_now_variant2($item['variant_id']);
-                                 //   }
-//                                    else{
-//                                        $giavon_si = 0;
-//                                    }
-
-                                    //if($giavon_si <= 0 || $soluongsi <= 0){
-                                   //     $average_price = $price_steuer;
-                                  //  }else{
-                                        $average_price_si = (((double)$giavon_si * $soluongsi) + ((double)$price_steuer * (double)$item['sl_nhap']))/ ((double)$item['sl_nhap'] + (double)$soluongsi);
-                                  //  }
-                                    //var_dump($average_price);die;
-                                    $average_price_new_si = round($average_price_si,2);
-
-                                    if($average_price_new_si <= 0){
-                                        if($item["gianhapnew"] < $giavon_si){
-                                            $average_price_new_si = $giavon_si;
-                                        }else{
-                                            $average_price_new_si = $item["gianhapnew"];
-                                        }
-                                    }else{
-                                        //truong hop so luong trong kho bi am nhieu qua, phai dieu chinh lai ko co gia no nhay linh tih thap qua
-                                        if($soluongsi <= 0){
-                                            $average_price_new_si = $item["gianhapnew"];
-                                        }else{
-                                            $average_price_new_si = $average_price_new_si;
-                                        }
+                                if ($average_price_new_si <= 0) {
+                                    if ($item["gianhapnew"] < $giavon_si) {
+                                        $average_price_new_si = $giavon_si;
+                                    } else {
+                                        $average_price_new_si = $item["gianhapnew"];
                                     }
-
-                                    $item['average_price'] = $average_price_new_si;
-                                    $this->m_voxy_package->update_giavon_si($idnew,$item['average_price']);
+                                } else {
+                                    //truong hop so luong trong kho bi am nhieu qua, phai dieu chinh lai ko co gia no nhay linh tih thap qua
+                                    if ($soluongsi <= 0) {
+                                        $average_price_new_si = $item["gianhapnew"];
+                                    } else {
+                                        $average_price_new_si = $average_price_new_si;
+                                    }
                                 }
+                                $item['average_price'] = $average_price_new_si;
+                                $this->m_voxy_package->update_giavon_si($idnew, $item['average_price']);
+                            }
 
-                                $item['thanhtien'] = (double)$price_steuer * (int)$item["sl_nhap"];
-                                $tongtien += $item['thanhtien'];
-//                            }
-//                            else{
-//                                $item['thanhtien'] = 0;
-//                                $item['average_price'] = 0;
-//                                $tongtien += $item['thanhtien'];
-//                            }
+                            $item['thanhtien'] = (double)$price_steuer * (int)$item["sl_nhap"];
+                            $tongtien += $item['thanhtien'];
+
                         }
                     }
                 }
@@ -547,7 +528,7 @@ class Voxy_transfer extends manager_base
         }
 
         $data['name'] = trim($data['name']);
-        if(!isset($list_product)){
+        if (!isset($list_product)) {
             $list_product = "";
         }
 
@@ -570,9 +551,9 @@ class Voxy_transfer extends manager_base
             $data_return["key_name"] = $this->data->get_key_name();
             $data_return["record"] = $data;
             $data_return["state"] = 1; /* state = 1 : insert thành công */
-            if($data['status'] == 1 || $data['status'] == 3){
+            if ($data['status'] == 1 || $data['status'] == 3) {
                 $data_return["msg"] = "Cập nhật Thành Công hàng về vào cơ sở dữ liệu";
-                foreach ($list_product as $item){//add inventory
+                foreach ($list_product as $item) {//add inventory
                     if ($item['sl_nhap'] == "") {
                         $item['sl_nhap'] = 0;
                     }
@@ -588,7 +569,7 @@ class Voxy_transfer extends manager_base
                         $this->m_voxy_package->update_plus_inventory2($item['sl_nhap'], $id);//in DB
                     }
                 }
-            }else{
+            } else {
                 $data_return["msg"] = "Hàng về nhưng KHÔNG được cập nhật vào cơ sở dữ liệu";
             }
             $data_return["redirect"] = isset($data_return['redirect']) ? $data_return['redirect'] : "";
@@ -700,24 +681,24 @@ class Voxy_transfer extends manager_base
 //        }
 
 
-        if(isset($data["information"])){
+        if (isset($data["information"])) {
             $list_product = array();//xu ly lai san pham add vao database
             $i = 0;
             $tongtien = 0;
-            foreach ($data["information"] as $item){
+            foreach ($data["information"] as $item) {
                 $i++;
 
                 $check_variant1 = $this->m_voxy_package->check_variant1($item['variant_id']);
                 $check_variant2 = $this->m_voxy_package->check_variant2($item['variant_id']);
-                if(isset($item['variant_id']) && $item['variant_id'] != ""){
+                if (isset($item['variant_id']) && $item['variant_id'] != "") {
                     $idnew = $this->m_voxy_package->get_id_from_variant($item['variant_id']);
-                }else {
+                } else {
                     $idnew = false;
                 }
 
                 if (isset($data["quantity"])) {
-                    foreach ($data["quantity"] as $key => $item_quantity){
-                        if($key == $item['variant_id']){
+                    foreach ($data["quantity"] as $key => $item_quantity) {
+                        if ($key == $item['variant_id']) {
                             $item["sl_nhap"] = $item_quantity;
                             //$list_product[$i] = $item;
                         }
@@ -725,17 +706,17 @@ class Voxy_transfer extends manager_base
                 }
 
                 if (isset($data["giabannew"])) {
-                    foreach ($data["giabannew"] as $key => $row){
-                        if($key == $item['variant_id']){
+                    foreach ($data["giabannew"] as $key => $row) {
+                        if ($key == $item['variant_id']) {
                             $item["giabannew"] = $row;
-                            if($item['giabannew'] != 0 || $item['giabannew'] != ""){
+                            if ($item['giabannew'] != 0 || $item['giabannew'] != "") {
                                 //update gia ban
                                 if ($check_variant1 == true) {
-                                    $this->m_voxy_package->update_giaban_le($idnew,$item['giabannew']);
+                                    $this->m_voxy_package->update_giaban_le($idnew, $item['giabannew']);
                                 }
 
                                 if ($check_variant2 == true) {
-                                    $this->m_voxy_package->update_giaban_si($idnew,$item['giabannew']);
+                                    $this->m_voxy_package->update_giaban_si($idnew, $item['giabannew']);
                                 }
 
                             }
@@ -745,58 +726,58 @@ class Voxy_transfer extends manager_base
 
                 //var_dump($data['gianhapnew']);die;
                 if (isset($data["gianhapnew"])) {
-                    foreach ($data["gianhapnew"] as $key => $item_gianhapnew){
-                        if($key == $item['variant_id']){
+                    foreach ($data["gianhapnew"] as $key => $item_gianhapnew) {
+                        if ($key == $item['variant_id']) {
                             $item["gianhapnew"] = (double)$item_gianhapnew;
-                            if($item["gianhapnew"] != 0){
+                            if ($item["gianhapnew"] != 0) {
                                 //get ma so thue
                                 $masothue = $this->m_voxy_package->get_mwst($item['sku']);
-                                if($mswt == 1){//brutto
-                                    $price_steuer= (double)$item_gianhapnew;
-                                }else{//netto thi phai tinh ra brutto
+                                if ($mswt == 1) {//brutto
+                                    $price_steuer = (double)$item_gianhapnew;
+                                } else {//netto thi phai tinh ra brutto
                                     //$price_steuer = (double)$item_gianhapnew * ( $masothue / 100 );
-                                    $price_steuer = (double)$item_gianhapnew * ( 1 + ($masothue / 100) );
+                                    $price_steuer = (double)$item_gianhapnew * (1 + ($masothue / 100));
                                 }
                                 //xu ly them phan gia trung binh
 
                                 if ($check_variant1 == true) {
                                     //gia von la gia mua
-                                    if($idnew != false){
+                                    if ($idnew != false) {
                                         $giavon = $this->m_voxy_package->get_gia_mua_le($idnew);
                                         $soluongle = $this->m_voxy_package->get_quantity_now_variant1($item['variant_id']);
-                                    }else{
+                                    } else {
                                         $giavon = 0;
                                     }
 
-                                    if($giavon == 0 || $soluongle == 0 || $soluongle < 0){
+                                    if ($giavon == 0 || $soluongle == 0 || $soluongle < 0) {
                                         $average_price = $price_steuer;
-                                    }else{
-                                        $average_price = (((double)$giavon * (double)$soluongle) + ((double)$price_steuer * (double)$item['sl_nhap']))/ ((double)$item['sl_nhap'] + (double)$soluongle);
+                                    } else {
+                                        $average_price = (((double)$giavon * (double)$soluongle) + ((double)$price_steuer * (double)$item['sl_nhap'])) / ((double)$item['sl_nhap'] + (double)$soluongle);
                                     }
-                                    $item['average_price'] = number_format($average_price,2);
-                                    $this->m_voxy_package->update_giavon_le($idnew,$item['average_price']);
+                                    $item['average_price'] = number_format($average_price, 2);
+                                    $this->m_voxy_package->update_giavon_le($idnew, $item['average_price']);
                                 }
 
                                 if ($check_variant2 == true) {
-                                    if($idnew != false){
+                                    if ($idnew != false) {
                                         $giavon = $this->m_voxy_package->get_gia_mua_si($idnew);
                                         $soluongsi = $this->m_voxy_package->get_quantity_now_variant2($item['variant_id']);
-                                    }else{
+                                    } else {
                                         $giavon = 0;
                                     }
 
-                                    if($giavon == 0 || $soluongsi == 0 || $soluongsi < 0){
+                                    if ($giavon == 0 || $soluongsi == 0 || $soluongsi < 0) {
                                         $average_price = $price_steuer;
-                                    }else{
-                                        $average_price = (((double)$giavon*(double)$soluongsi) + ((double)$price_steuer * (double)$item['sl_nhap']))/ ((double)$item['sl_nhap'] + (double)$soluongsi);
+                                    } else {
+                                        $average_price = (((double)$giavon * (double)$soluongsi) + ((double)$price_steuer * (double)$item['sl_nhap'])) / ((double)$item['sl_nhap'] + (double)$soluongsi);
                                     }
-                                    $item['average_price'] = number_format($average_price,2);
-                                    $this->m_voxy_package->update_giavon_si($idnew,$item['average_price']);
+                                    $item['average_price'] = number_format($average_price, 2);
+                                    $this->m_voxy_package->update_giavon_si($idnew, $item['average_price']);
                                 }
 
                                 $item['thanhtien'] = (double)$price_steuer * (int)$item["sl_nhap"];
                                 $tongtien += $item['thanhtien'];
-                            }else{
+                            } else {
                                 $item['thanhtien'] = 0;
                                 $item['average_price'] = 0;
                                 $tongtien += $item['thanhtien'];
@@ -810,7 +791,7 @@ class Voxy_transfer extends manager_base
 
 
         $data['name'] = trim($data['name']);
-        if(!isset($list_product)){
+        if (!isset($list_product)) {
             $list_product = "";
         }
         $data['product_variants'] = json_encode($list_product);
@@ -829,10 +810,10 @@ class Voxy_transfer extends manager_base
             $data_return["key_name"] = $this->data->get_key_name();
             $data_return["record"] = $this->_process_data_table($this->data->get_one($id));
             $data_return["state"] = 1; /* state = 1 : insert thành công */
-            if($data['status'] == 1 || $data['status'] == 3){//1 nhap kho, 3 hang tra ve
+            if ($data['status'] == 1 || $data['status'] == 3) {//1 nhap kho, 3 hang tra ve
                 $data_return["msg"] = "Cập nhật Thành Công hàng về vào cơ sở dữ liệu. Bạn đã chọn NHẬP KHO";
                 //cong inventory
-                foreach ($list_product as $item){
+                foreach ($list_product as $item) {
                     if ($item['sl_nhap'] == "") {
                         $item['sl_nhap'] = 0;
                     }
@@ -848,7 +829,7 @@ class Voxy_transfer extends manager_base
                         $this->m_voxy_package->update_plus_inventory2($item['sl_nhap'], $id);//in DB
                     }
                 }
-            }else{
+            } else {
                 $data_return["msg"] = "Hàng CHƯA nhập vào kho ";
             }
             $data_return["redirect"] = isset($data_return['redirect']) ? $data_return['redirect'] : "";
@@ -950,19 +931,19 @@ class Voxy_transfer extends manager_base
         $data_return["callback"] = isset($data['callback']) ? $data['callback'] : "get_data_view_response";
         $id = intval($id);
         if (!$id) {
-            $data_return["state"]   = 0;
-            $data_return["msg"]     = "ID dữ liệu không tồn tại !";
+            $data_return["state"] = 0;
+            $data_return["msg"] = "ID dữ liệu không tồn tại !";
             echo json_encode($data_return);
             return FALSE;
         }
 
         if (!isset($data["save_link"])) {
-            $data["save_link"]      = site_url($this->name["class"] . "/edit_save");
+            $data["save_link"] = site_url($this->name["class"] . "/edit_save");
         }
         if (!isset($data["list_input"])) {
-            $data["list_input"]     = $this->_get_form($id);
+            $data["list_input"] = $this->_get_form($id);
         }
-        $data["title"]              = $title = "Xem dữ liệu " . $this->name["object"];
+        $data["title"] = $title = "Xem dữ liệu " . $this->name["object"];
 
         if (!isset($data["status"])) {
             $data["status"] = $this->data->_get_status($id);
@@ -1045,7 +1026,7 @@ class Voxy_transfer extends manager_base
                     for ($row = 3; $row <= $highestRow; $row++) {
                         $i++;
                         $artikel_nummer = $worksheet->getCellByColumnAndRow(2, $row)->getValue();//sku1
-                        if($artikel_nummer != ""){
+                        if ($artikel_nummer != "") {
                             $stt = $worksheet->getCellByColumnAndRow(0, $row)->getValue();
                             $cat_title = $worksheet->getCellByColumnAndRow(1, $row)->getValue();
                             $cat_id = $this->m_voxy_category->get_id_title($cat_title);
@@ -1053,36 +1034,33 @@ class Voxy_transfer extends manager_base
 
                             $title = $worksheet->getCellByColumnAndRow(3, $row)->getValue();
                             $quantity = $worksheet->getCellByColumnAndRow(4, $row)->getValue();
-                            $gianhap_new = round($worksheet->getCellByColumnAndRow(5, $row)->getValue(),2);
+                            $gianhap_new = round($worksheet->getCellByColumnAndRow(5, $row)->getValue(), 2);
                             $donvi = $worksheet->getCellByColumnAndRow(6, $row)->getValue();
 
                             $thanhtien = $gianhap_new * $quantity;
-                            $id  = $this->m_voxy_package->get_id_from_sku1($artikel_nummer);
+                            $id = $this->m_voxy_package->get_id_from_sku1($artikel_nummer);
                             $infor = $this->m_voxy_package->get_all_infor($id);
-                            if($infor){
-                                foreach ($infor as $if){
+                            if ($infor) {
+                                foreach ($infor as $if) {
                                     $product_id = $if['id_shopify'];
                                     $variant_id = $if['variant1_id'];
                                 }
                             }
 
                             //$id = $this->m_voxy_package->get_id_from_variant($variant_id);
-                            if($quantity > 0){
-                                $data_add = array(
-                                    'quantity' => $quantity,
-                                    'variant_title' => $donvi,
-                                    'gianhapnew' => $gianhap_new,
-                                    'product_id' => $product_id,
-                                    'variant_id' => $variant_id,
-                                    'cat_id' => $cat_id,
-                                    'sku' => $artikel_nummer,
-                                    'title' => $title,
-                                    'thanhtien' => $thanhtien
-                                );
-                                $data_update_database[$i] = $data_add;
-                            }
 
-
+                            $data_add = array(
+                                'quantity' => $quantity,
+                                'variant_title' => $donvi,
+                                'gianhapnew' => $gianhap_new,
+                                'product_id' => $product_id,
+                                'variant_id' => $variant_id,
+                                'cat_id' => $cat_id,
+                                'sku' => $artikel_nummer,
+                                'title' => $title,
+                                'thanhtien' => $thanhtien
+                            );
+                            $data_update_database[$i] = $data_add;
                         }
                     }
                 }
