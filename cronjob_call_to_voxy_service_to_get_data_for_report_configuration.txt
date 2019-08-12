@@ -1,0 +1,7 @@
+1. Import sql file cronjob_data_report_tables_2018_05_21.sql
+2. Xóa field unit_id và khóa ngoại trong table  voxy_lessons
+3. cd đến root của project (nơi chứa file index.php)
+4. run cmd: "php index.php admin_cronjob_report run_by_user_id" -> đợi chạy xong lần 1
+5. Setup cronjob:
+Eg: 5 0 * * * php ROOT_DIR/index.php admin_cronjob_report run_by_date_range
+Dòng trên để chạy update vào lúc 0h5p hàng ngày (1 ngày / lần)

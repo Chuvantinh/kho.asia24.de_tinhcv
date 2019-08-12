@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bestellungenliste xmlns="http://NetConnections/XML/Bestellungen/v1_0" version="1.0">
+    <Bestellung>
+        <BestellNr>100000076</BestellNr>
+        <KundenNr>2</KundenNr>
+        <Kundengruppe>General</Kundengruppe>
+        <UStID>100000076</UStID>
+        <Bestelldatum>2009-11-11T09:05:13+01:00</Bestelldatum>
+        <Bestellstatus>In Bearbeitung</Bestellstatus>
+        <Bemerkung/>
+        <Kundenadresse>
+            <Anrede>Herr</Anrede>
+            <Firma>OscWare GmbH</Firma>
+            <Ansprechpartner>Thomas Klein</Ansprechpartner>
+            <Nachname>Muller</Nachname>
+            <Vorname>Thomas</Vorname>
+            <Strasse>pichel</Strasse>
+            <Hausnummer>131</Hausnummer>
+            <PLZ>109</PLZ>
+            <Ort>Berlin</Ort>
+            <Land>Deutschland</Land>
+            <LandISO>DE</LandISO>
+            <Telefon>1234</Telefon>
+            <Mobiltelefon>123</Mobiltelefon>
+            <Fax>99</Fax>
+            <Emailadresse>chuvantinh1991€gmail.com</Emailadresse>
+        </Kundenadresse>
+        <Rechnungsadresse>
+            <Anrede>Herr</Anrede>
+            <Firma>OscWare GmbH</Firma>
+            <Ansprechpartner>Thomas Klein</Ansprechpartner>
+            <Nachname>Muller</Nachname>
+            <Vorname>Thomas</Vorname>
+            <Strasse>pichel</Strasse>
+            <Hausnummer>131</Hausnummer>
+            <PLZ>109</PLZ>
+            <Ort>Berlin</Ort>
+            <Land>Deutschland</Land>
+            <LandISO>DE</LandISO>
+            <Telefon>1234</Telefon>
+            <Mobiltelefon>123</Mobiltelefon>
+            <Fax>99</Fax>
+            <Emailadresse>nguyenduclong@gmail.com</Emailadresse>
+        </Rechnungsadresse>
+        <Lieferadresse>
+            <Anrede>Herr</Anrede>
+            <Firma>OscWare GmbH</Firma>
+            <Ansprechpartner>Thomas Klein</Ansprechpartner>
+            <Nachname>Muller</Nachname>
+            <Vorname>Thomas</Vorname>
+            <Strasse>pichel</Strasse>
+            <Hausnummer>131</Hausnummer>
+            <PLZ>109</PLZ>
+            <Ort>Berlin</Ort>
+            <Land>Deutschland</Land>
+            <LandISO>DE</LandISO>
+            <Telefon>1234</Telefon>
+            <Mobiltelefon>123</Mobiltelefon>
+            <Fax>99</Fax>
+            <Emailadresse>nguyenduclong@gmail.com</Emailadresse>
+        </Lieferadresse>
+        <Zahlungsart>
+            <Name>invoice</Name>
+            <Bezeichnung>null</Bezeichnung>
+            <Beschreibung>Zahlung per Vorkasse</Beschreibung>
+            <Bruttopreis>0</Bruttopreis>
+            <Nettopreis>0</Nettopreis>
+            <Steuersatz>19</Steuersatz>
+        </Zahlungsart>
+        <Artikelliste>
+            <Artikel>
+                <ArtikelNr>1032</ArtikelNr>
+                <Bezeichnung>1032</Bezeichnung>
+                <Beschreibung>1032</Beschreibung>
+                <Menge>1032</Menge>
+                <Bruttopreis>1032</Bruttopreis>
+                <Nettopreis>1032</Nettopreis>
+                <Steuersatz>1032</Steuersatz>
+                <Einheit>1032</Einheit>
+                <Gewicht>1032</Gewicht>
+                <EAN>1032</EAN>
+            </Artikel>
+        </Artikelliste>
+    </Bestellung>
+</Bestellungenliste>

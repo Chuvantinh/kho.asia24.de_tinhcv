@@ -1,0 +1,153 @@
+@media only screen and (max-width: 600px) {
+    div.dataTables_filter label{
+        float:left !important;
+        width: 100%;
+    }
+    .widget-title .actions_content {
+        right: 0;
+    }
+
+    #foo {
+        height: 40px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+       width: 100%;
+    }
+    .e_form_search{padding: 0 !important;}
+    .widget-content{margin-top: 80px;}
+    tr th[field_name="m.id"],tr th[field_name="m.cat_id"],tr th[field_name="m.barcode1"],tr th[field_name="m.barcode2"],
+    tr th[field_name="m.keyword_si"],tr th[field_name="m.location"],tr th[field_name="custom_check"],
+    tr td[for_key="m.id"],tr td[for_key="m.cat_id"],tr td[for_key="m.barcode1"],tr td[for_key="m.barcode2"],
+    tr td[for_key="m.keyword_si"],tr td[for_key="m.location"],tr td[for_key="custom_check"]
+    {
+        display: none !important;
+    }
+    #header .navbar-inner {
+        height: 50px !important;
+    }
+    #sidebar, #content .wrapper {
+        margin-top: 75px;
+    }
+    .minimize {display: none;}
+    #foo {height: 50px;}
+
+    .voxy_package_checkhang tr th[field_name="m.location"],
+    .voxy_package_checkhang tr td[for_key="m.location"]
+    {
+        display: block !important;
+    }
+
+    .shutdown{
+        display: none !important;
+    }
+
+    .check_and_excel {
+        margin-top: 0 !important;
+    }
+    .export_product_excel {
+        width: 94%;
+        margin: 0 11px;
+    }
+
+    .e_form_search {
+        margin-top: 5px !important;
+    }
+
+    .chuvantinh_widget {
+        margin-top: 0px !important;
+    }
+
+    .btn-inverse {
+        display: none !important;
+    }
+
+    #login {
+        width: 280px;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+
+    .barcode_input {
+        height: 50px;
+        background-color: #40cc4b;
+        color: white;
+        width: 100% !important;
+    }
+    .e_search_table {
+        width: 100% !important;
+        line-height: 40px;
+    }
+    #content .row-fluid {
+        margin-top: 5px;
+    }
+
+    .autos {
+        min-width: 0;
+    }
+    .responsive table {
+        min-width: 0;
+    }
+    .autos tbody { border: none}
+    .widget-content {
+        margin-top: 0;
+    }
+    .timkiem_checkhang {
+        width: 101% !important;
+    }
+    .b_add,b_view {
+        width: 100px !important;
+        height: 40px !important;
+    }
+    #resBtn {
+        width: 20%;
+    }
+
+    .icon16{font-size:30px;}
+    .action .detail,.action .edit, .action .delete {
+        border: 0;
+        margin-left: 2px;
+    }
+    .excel-package{
+        display: none !important;
+    }
+    .widget .widget-form-search {
+        padding-top: 0px;
+    }
+}
+
+.name {width: 100%;}
+.name .width-30 { width: 30%;}
+.name .width-70 { width: 70%;}
+.left {width: 70%;float: left;padding-right: 10px;}
+.right {width: 30%; float: left;}
+.right .label-right {margin: 0;padding: 0;width: 100%;font-weight: bold;}
+.right .text-right {margin: 0;padding: 0;float: left;text-align: left;}
+.right p {margin: 0;}
+.new-abc {overflow: hidden;}
+.left .note {margin-top: 10px;}
+
+.timkiem {
+    margin-top: 31px;
+    line-height: 25px;
+}
+.timkiem #i_btn_search_submit {
+   width: 100%;
+    line-height: 25px;
+}
+@media only screen and (max-width: 1024px) {
+    .ban_quyen {display: none;}
+     #foo {border: 1px solid; }
+    .widget-content {overflow-x: hidden}
+    .e_ajax_submit form {
+        max-width: 866px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #header .navbar-inner {
+        height: 50px !important;
+    }
+}
+
+
+

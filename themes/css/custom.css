@@ -1,0 +1,134 @@
+.bgwhite{
+    background-color: #fff;
+}
+
+.modal_content [class*="span"]{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.widget-title .actions_content{
+    position: absolute;
+    top: 5px;
+    right: 40px;
+}
+div.dataTables_length label{
+    white-space: nowrap;
+}
+div.dataTables_length label > * {
+    display: inline-block;
+}
+div.dataTables_length label .select2-container {
+    margin-bottom: 0px;
+}
+
+div.dataTables_filter label {
+    margin-bottom: 0px;
+}
+
+div.dataTables_filter label input {
+    margin-bottom: 0px;
+}
+
+#content .row-fluid.no-magin{
+    margin: 0px;
+}
+div.dataTables_info {
+    padding-top: 17px;
+}
+.action{
+    white-space: nowrap;
+}
+
+.action .detail, 
+.action .edit,
+.action .delete{
+    height: 23px;
+    width: 23px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+    line-height: 24px;
+}
+
+.action .detail:hover, 
+.action .edit:hover,
+.action .delete:hover{
+    background-color: #eee;
+    color: #333;
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child{
+    width: 1%;
+    padding-right: 16px;
+}
+
+.table-bordered thead:first-child tr:first-child th[field_name='custom_check'],
+.table-bordered thead:first-child tr:first-child th[field_name='custom_action']{
+    background: none;
+    cursor: default;
+}
+
+.table-bordered thead:first-child tr:first-child th[field_name='custom_action']{
+    width: 1%;
+}
+
+
+.table-bordered thead:first-child tr:first-child th[field_name='custom_check']{
+    width: 1%;
+    padding: 8px;
+}
+
+.hide {
+    display: none;
+}
+
+input.changer_number_record{
+    width: 45px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.no_record {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px 0px 20px;
+    background-color: #eee;
+    border-top: none;
+    font-size: 16px;
+}
+
+
+.modal_content input,
+.modal_content textarea,
+.modal_content .uneditable-input {
+    width: 100%;
+    min-width: 300px;
+}
+
+.modal_content input[type='checkbox']{
+    width: auto;
+    min-width: 0px;
+}
+
+.modal_content form{
+    margin: 0;
+}
+
+body.modal-open{
+    overflow: hidden;
+}
+
+.recent_edit,
+.table-striped tbody > tr.recent_edit > td,
+.table-striped tbody > tr.recent_edit > th{
+    background: #F4FF6F;
+}
+
+.ui-datepicker{
+    z-index: 1061 !important;
+}

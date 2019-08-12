@@ -1,0 +1,1 @@
+<script src="<?php echo $this->path_static_file; ?>js/edit.js"></script>

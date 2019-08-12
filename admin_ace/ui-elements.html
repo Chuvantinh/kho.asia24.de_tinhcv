@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Genyx admin v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SuggeElson"/>
+    <meta name="description"
+          content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework"/>
+    <meta name="keywords"
+          content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap"/>
+    <meta name="application-name" content="Genyx admin template"/> <!-- Headings -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+    <!-- Text -->
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
+    <!--[if lt IE 9]>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css"/> <![endif]-->
+    <!-- Core stylesheets do not remove -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="css/icons.css" rel="stylesheet"/>
+    <link href="css/genyx-theme/jquery.ui.genyx.css" rel="stylesheet"/> <!-- Plugins stylesheets -->
+    <link href="js/plugins/forms/uniform/uniform.default.css" rel="stylesheet"/>
+    <link href="js/plugins/ui/range-slider/rangeslider.css" rel="stylesheet"/>
+    <link href="js/plugins/ui/jgrowl/jquery.jgrowl.css" rel="stylesheet"/> <!-- app stylesheets -->
+    <link href="css/app.css" rel="stylesheet"/> <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link href="css/custom.css" rel="stylesheet"/>
+    <!--[if IE 8]>
+    <link href="css/ie8.css" rel="stylesheet" type="text/css"/><![endif]-->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> <!--[if lt IE 9]> </script>
+<script src="js/html5shiv.js"></script></script> <![endif]--> <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="images/ico/favicon.html">
+    <!-- Le javascript ================================================== --><!-- Important plugins put in all pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/conditionizr.min.js"></script>
+    <script src="js/plugins/core/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="js/plugins/core/jrespond/jRespond.min.js"></script>
+    <script src="js/jquery.genyxAdmin.js"></script> <!-- Form plugins -->
+    <script src="js/plugins/forms/uniform/jquery.uniform.min.js"></script> <!-- UI plugins -->
+    <script src="js/plugins/ui/range-slider/rangeslider-ruler.js"></script>
+    <script src="js/plugins/ui/animated-progress-bar/jquery.progressbar.js"></script>
+    <script src="js/plugins/ui/jgrowl/jquery.jgrowl.min.js"></script> <!-- Charts plugins -->
+    <script src="js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script> <!-- Init plugins -->
+    <script src="js/app.js"></script><!-- Core js functions -->
+    <script src="js/pages/ui-elements.js"></script><!-- Init plugins only for page --> </head>
+<body>
+<header id="header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid"><a class="brand" href="dashboard.html"><img src="images/logo.png"
+                                                                                 alt="Genyx admin"></a>
+            <div class="nav-no-collapse">
+                <div id="top-search">
+                    <form action="#" method="post" class="form-search">
+                        <div class="input-append"><input type="text" name="tsearch" id="tsearch"
+                                                         placeholder="Search here ..." class="search-query">
+                            <button type="submit" class="btn"><i class="icon16 i-search-2 gap-right0"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i
+                            class="icon24 i-bell-2"></i> <span class="notification red">6</span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class=""><i class="icon16 i-calendar-2"></i> Admin Jenny add event</a></li>
+                            <li><a href="#" class=""><i class="icon16 i-file-zip"></i> User Dexter attach file</a></li>
+                            <li><a href="#" class=""><i class="icon16 i-stack-picture"></i> User Dexter attach 3
+                                pictures</a></li>
+                            <li><a href="#" class=""><i class="icon16 i-cart-add"></i> New orders <span
+                                    class="notification green">2</span></a></li>
+                            <li><a href="#" class=""><i class="icon16 i-bubbles-2"></i> New comments <span
+                                    class="notification red">5</span></a></li>
+                            <li><a href="#" class=""><i class="icon16 i-pie-5"></i> Daily stats is generated</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i
+                            class="icon24 i-envelop-2"></i> <span class="notification red">3</span> </a>
+                        <ul class="dropdown-menu messages">
+                            <li class="head"><h4>Inbox</h4> <span class="count">3 messages</span> <span class="new-msg"><a
+                                    href="#" class="tipB" title="Write message"><i
+                                    class="icon16 i-pencil-5"></i></a></span></li>
+                            <li><a href="#" class="clearfix"> <span class="avatar"><img src="images/avatars/peter.jpg"
+                                                                                        alt="avatar"></span> <span
+                                    class="msg">Call me i need to talk with you</span>
+                                <button class="btn close"><i class="icon12 i-close-2"></i></button>
+                            </a></li>
+                            <li><a href="#" class="clearfix"> <span class="avatar"><img src="images/avatars/milen.jpg"
+                                                                                        alt="avatar"></span> <span
+                                    class="msg">Problem with registration</span>
+                                <button class="btn close"><i class="icon12 i-close-2"></i></button>
+                            </a></li>
+                            <li><a href="#" class="clearfix"> <span class="avatar"><img src="images/avatars/anonime.jpg"
+                                                                                        alt="avatar"></span> <span
+                                    class="msg">I have question about ...</span>
+                                <button class="btn close"><i class="icon12 i-close-2"></i></button>
+                            </a></li>
+                            <li class="foot"><a href="email.html">View all messages</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown user"><a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"> <img
+                            src="images/avatars/sugge.jpg" alt="sugge"> <span class="more"><i
+                            class="icon16 i-arrow-down-2"></i></span> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class=""><i class="icon16 i-cogs"></i> Settings</a></li>
+                            <li><a href="profile.html" class=""><i class="icon16 i-user"></i> Profile</a></li>
+                            <li><a href="index-2.html" class=""><i class="icon16 i-exit"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                </ul>
+            </div><!--/.nav-collapse --> </div>
+    </div>
+</header> <!-- End #header -->
+<div class="main">
+    <aside id="sidebar">
+        <div class="side-options">
+            <ul>
+                <li><a href="#" id="collapse-nav" class="act act-primary tip" title="Collapse navigation"><i
+                        class="icon16 i-arrow-left-7"></i></a></li>
+            </ul>
+        </div>
+        <div class="sidebar-wrapper">
+            <nav id="mainnav">
+                <ul class="nav nav-list">
+                    <li><a href="dashboard.html"> <span class="icon"><i class="icon20 i-screen"></i></span> <span
+                            class="txt">Dashboard</span> </a></li>
+                    <li><a href="charts.html"> <span class="icon"><i class="icon20 i-stats-up"></i></span> <span
+                            class="txt">Charts</span> </a></li>
+                    <li><a href="#"> <span class="icon"><i class="icon20 i-menu-6"></i></span> <span
+                            class="txt">Forms</span> </a>
+                        <ul class="sub">
+                            <li><a href="form-elements.html"> <span class="icon"><i
+                                    class="icon20 i-stack-list"></i></span> <span class="txt">Form elements</span> </a>
+                            </li>
+                            <li><a href="form-validation.html"> <span class="icon"><i
+                                    class="icon20 i-stack-checkmark"></i></span> <span
+                                    class="txt">Form validation</span> </a></li>
+                            <li><a href="form-wizard.html"> <span class="icon"><i
+                                    class="icon20 i-stack-star"></i></span> <span class="txt">Form wizard</span> </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> <span class="icon"><i class="icon20 i-table-2"></i></span> <span
+                            class="txt">Tables</span> </a>
+                        <ul class="sub">
+                            <li><a href="tables.html"> <span class="icon"><i class="icon20 i-table"></i></span> <span
+                                    class="txt">Static tables</span> </a></li>
+                            <li><a href="data-tables.html"> <span class="icon"><i class="icon20 i-table"></i></span>
+                                <span class="txt">Data tables</span> </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="grid.html"> <span class="icon"><i class="icon20 i-grid-5"></i></span> <span
+                            class="txt">Grid</span> </a></li>
+                    <li><a href="typo.html"> <span class="icon"><i class="icon20 i-font"></i></span> <span class="txt">Typography</span>
+                    </a></li>
+                    <li><a href="calendar.html"> <span class="icon"><i class="icon20 i-calendar"></i></span> <span
+                            class="txt">Calendar</span> </a></li>
+                    <li><a href="#"> <span class="icon"><i class="icon20 i-cogs"></i></span> <span class="txt">Ui Elements</span>
+                    </a>
+                        <ul class="sub">
+                            <li><a href="icons.html"> <span class="icon"><i class="icon20 i-IcoMoon"></i></span> <span
+                                    class="txt">Icons</span> </a></li>
+                            <li><a href="buttons.html"> <span class="icon"><i class="icon20 i-point-up"></i></span>
+                                <span class="txt">Buttons</span> </a></li>
+                            <li><a href="ui-elements.html"> <span class="icon"><i class="icon20 i-puzzle"></i></span>
+                                <span class="txt">UI Elements</span> </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html"> <span class="icon"><i class="icon20 i-images"></i></span> <span
+                            class="txt">Gallery</span> </a></li>
+                    <li><a href="maps.html"> <span class="icon"><i class="icon20 i-location-4"></i></span> <span
+                            class="txt">Maps</span> </a></li>
+                    <li><a href="file-manager.html"> <span class="icon"><i class="icon20 i-cloud-upload"></i></span>
+                        <span class="txt">File manager</span> </a></li>
+                    <li><a href="widgets.html"> <span class="icon"><i class="icon20 i-cube-3"></i></span> <span
+                            class="txt">Widgets</span> </a></li>
+                    <li><a href="#"> <span class="icon"><i class="icon20 i-file-8"></i></span> <span
+                            class="txt">Pages</span> </a>
+                        <ul class="sub">
+                            <li><a href="#"> <span class="icon"><i class="icon20 i-warning"></i></span> <span
+                                    class="txt">Error Pages</span> </a>
+                                <ul class="sub">
+                                    <li><a href="403.html"> <span class="icon"><i
+                                            class="icon20 i-notification"></i></span> <span class="txt">Error 403</span>
+                                    </a></li>
+                                    <li><a href="404.html"> <span class="icon"><i
+                                            class="icon20 i-notification"></i></span> <span class="txt">Error 404</span>
+                                    </a></li>
+                                    <li><a href="405.html"> <span class="icon"><i
+                                            class="icon20 i-notification"></i></span> <span class="txt">Error 405</span>
+                                    </a></li>
+                                    <li><a href="500.html"> <span class="icon"><i
+                                            class="icon20 i-notification"></i></span> <span class="txt">Error 500</span>
+                                    </a></li>
+                                    <li><a href="503.html"> <span class="icon"><i
+                                            class="icon20 i-notification"></i></span> <span class="txt">Error 503</span>
+                                    </a></li>
+                                    <li><a href="offline.html"> <span class="icon"><i class="icon20 i-notification"></i></span>
+                                        <span class="txt">Offline page</span> </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="invoice.html"> <span class="icon"><i class="icon20 i-credit"></i></span> <span
+                                    class="txt">Invoice page</span> </a></li>
+                            <li><a href="profile.html"> <span class="icon"><i class="icon20 i-user"></i></span> <span
+                                    class="txt">Profile page</span> </a></li>
+                            <li><a href="search.html"> <span class="icon"><i class="icon20 i-search-2"></i></span> <span
+                                    class="txt">Search page</span> </a></li>
+                            <li><a href="email.html"> <span class="icon"><i class="icon20 i-envelop-2"></i></span> <span
+                                    class="txt">Email page</span> </a></li>
+                            <li><a href="support.html"> <span class="icon"><i class="icon20 i-support"></i></span> <span
+                                    class="txt">Support page</span> </a></li>
+                            <li><a href="faq.html"> <span class="icon"><i class="icon20 i-question"></i></span> <span
+                                    class="txt">FAQ page</span> </a></li>
+                            <li><a href="blank.html"> <span class="icon"><i class="icon20 i-file-7"></i></span> <span
+                                    class="txt">Blank page</span> </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav> <!-- End #mainnav --> </div> <!-- End .sidebar-wrapper --> </aside><!-- End #sidebar -->
+    <section id="content">
+        <div class="wrapper">
+            <div class="crumb">
+                <ul class="breadcrumb">
+                    <li><a href="#"><i class="icon16 i-home-4"></i>Home</a> <span class="divider">/</span></li>
+                    <li><a href="#">Library</a> <span class="divider">/</span></li>
+                    <li class="active">Data</li>
+                </ul>
+            </div>
+            <div class="container-fluid">
+                <div id="heading" class="page-header"><h1><i class="icon20 i-cog-3"></i> UI Elements</h1></div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="page-header"><h4>Regular tabs</h4></div>
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                            <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
+                                    class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#dropdown" data-toggle="tab">@fat</a></li>
+                                    <li><a href="#dropdown" data-toggle="tab">@mdo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="home"><p>Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Vel, neque expedita quas ex repellendus similique adipisci enim.
+                                Culpa, vero corporis alias odit labore vel explicabo vitae soluta facere ut libero.</p>
+                            </div>
+                            <div class="tab-pane fade" id="profile"><p>Cum, quibusdam, iste, accusamus impedit et modi
+                                cumque iure itaque harum neque consequuntur animi nesciunt delectus beatae eum expedita
+                                nobis numquam odit?</p></div>
+                            <div class="tab-pane fade" id="dropdown"><p>Eligendi, quos, adipisci, impedit nisi minima
+                                vero cupiditate quia beatae necessitatibus atque asperiores cumque earum ex corrupti
+                                aspernatur consequuntur voluptas quidem sunt id nam delectus debitis pariatur fugiat
+                                repudiandae facilis deleniti ad dignissimos.</p></div>
+                            <div class="tab-pane fade" id="dropdown"><p>Trust fund seitan letterpress, keytar raw denim
+                                keffiyeh etsy art party before they sold out master.</p></div>
+                        </div>
+                    </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="page-header"><h4>Tabs on bottom</h4></div>
+                        <div class="tabbable tabs-below">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1"><p>Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Vel, neque expedita quas ex repellendus similique adipisci enim.
+                                    Culpa, vero corporis alias odit labore vel explicabo vitae soluta facere ut
+                                    libero.</p></div>
+                                <div class="tab-pane" id="tab2"><p>Cum, quibusdam, iste, accusamus impedit et modi
+                                    cumque iure itaque harum neque consequuntur animi nesciunt delectus beatae eum
+                                    expedita nobis numquam odit?</p></div>
+                                <div class="tab-pane" id="tab3"><p>Eligendi, quos, adipisci, impedit nisi minima vero
+                                    cupiditate quia beatae necessitatibus atque asperiores cumque earum ex corrupti
+                                    aspernatur consequuntur voluptas quidem sunt id nam delectus debitis pariatur fugiat
+                                    repudiandae facilis deleniti ad dignissimos.</p></div>
+                            </div>
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+                                <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+                                <li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- End .span6 --> </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="page-header"><h4>Tabs on the left</h4></div>
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab4" data-toggle="tab">Tab 1</a></li>
+                                <li class=""><a href="#tab5" data-toggle="tab">Tab 2</a></li>
+                                <li class=""><a href="#tab6" data-toggle="tab">Tab 3</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab4"><p>Raw denim you probably haven't heard of them
+                                    jean shorts Austin, accusamus mcsweeney's marfa nulla single-origin coffee, ethical
+                                    wes anderson tofu before they sold out </p> lorem
+                                </div>
+                                <div class="tab-pane" id="tab5"><p>Food truck fixie locavore, accusamus mcsweeney's
+                                    marfa nulla single-origin coffee squid,lomo retro fanny pack lo-fi farm-to-table
+                                    readymade. </p></div>
+                                <div class="tab-pane" id="tab6"><p>Etsy mixtape wayfarers, ethical wes anderson tofu
+                                    before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table
+                                    readymade. </p></div>
+                            </div>
+                        </div>
+                    </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="page-header"><h4>Tabs on the right</h4></div>
+                        <div class="tabbable tabs-right">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab7" data-toggle="tab">Tab 1</a></li>
+                                <li><a href="#tab8" data-toggle="tab">Tab 2</a></li>
+                                <li><a href="#tab9" data-toggle="tab">Tab 3</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab7"><p>Raw denim you probably haven't heard of them
+                                    jean shorts Austin, accusamus mcsweeney's marfa nulla single-origin coffee, ethical
+                                    wes anderson tofu before they sold out </p></div>
+                                <div class="tab-pane" id="tab8"><p>Food truck fixie locavore, accusamus mcsweeney's
+                                    marfa nulla single-origin coffee squid,lomo retro fanny pack lo-fi farm-to-table
+                                    readymade. </p></div>
+                                <div class="tab-pane" id="tab9"><p>Etsy mixtape wayfarers, ethical wes anderson tofu
+                                    before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table
+                                    readymade. </p></div>
+                            </div>
+                        </div>
+                    </div><!-- End .span6 --> </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Tabs in widget box</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content noPadding">
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active"><a href="#home1" data-toggle="tab">Home</a></li>
+                                    <li><a href="#profile1" data-toggle="tab">Profile</a></li>
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                                        <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
+                                            <li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="home1"><p>Lorem ipsum dolor sit amet,
+                                        consectetur adipisicing elit. Vel, neque expedita quas ex repellendus similique
+                                        adipisci enim. Culpa, vero corporis alias odit labore vel explicabo vitae soluta
+                                        facere ut libero.</p></div>
+                                    <div class="tab-pane fade" id="profile1"><p>Cum, quibusdam, iste, accusamus impedit
+                                        et modi cumque iure itaque harum neque consequuntur animi nesciunt delectus
+                                        beatae eum expedita nobis numquam odit?</p></div>
+                                    <div class="tab-pane fade" id="dropdown1"><p>Eligendi, quos, adipisci, impedit nisi
+                                        minima vero cupiditate quia beatae necessitatibus atque asperiores cumque earum
+                                        ex corrupti aspernatur consequuntur voluptas quidem sunt id nam delectus debitis
+                                        pariatur fugiat repudiandae facilis deleniti ad dignissimos.</p></div>
+                                    <div class="tab-pane fade" id="dropdown2"><p>Trust fund seitan letterpress, keytar
+                                        raw denim keffiyeh etsy art party before they sold out master.</p></div>
+                                </div>
+                            </div><!-- End .widget-content --> </div><!-- End .widget -->
+                        <div class="gap20"></div>
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Left Tabs in widget box</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content noPadding">
+                                <div class="tabbable tabs-left">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab10" data-toggle="tab">Tab 1</a></li>
+                                        <li class=""><a href="#tab11" data-toggle="tab">Tab 2</a></li>
+                                        <li class=""><a href="#tab12" data-toggle="tab">Tab 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab10"><p>Raw denim you probably haven't heard
+                                            of them jean shorts Austin, accusamus mcsweeney's marfa nulla single-origin
+                                            coffee, ethical wes anderson tofu before they sold out </p> lorem
+                                        </div>
+                                        <div class="tab-pane" id="tab11"><p>Food truck fixie locavore, accusamus
+                                            mcsweeney's marfa nulla single-origin coffee squid,lomo retro fanny pack
+                                            lo-fi farm-to-table readymade. </p></div>
+                                        <div class="tab-pane" id="tab12"><p>Etsy mixtape wayfarers, ethical wes anderson
+                                            tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi
+                                            farm-to-table readymade. </p></div>
+                                    </div>
+                                </div>
+                            </div><!-- End .widget-content --> </div><!-- End .widget --> </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Bottom tabs in widget box</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content noPadding">
+                                <div class="tabbable tabs-below">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab13"><p>Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit. Vel, neque expedita quas ex repellendus
+                                            similique adipisci enim. Culpa, vero corporis alias odit labore vel
+                                            explicabo vitae soluta facere ut libero.</p></div>
+                                        <div class="tab-pane" id="tab14"><p>Cum, quibusdam, iste, accusamus impedit et
+                                            modi cumque iure itaque harum neque consequuntur animi nesciunt delectus
+                                            beatae eum expedita nobis numquam odit?</p></div>
+                                        <div class="tab-pane" id="tab15"><p>Eligendi, quos, adipisci, impedit nisi
+                                            minima vero cupiditate quia beatae necessitatibus atque asperiores cumque
+                                            earum ex corrupti aspernatur consequuntur voluptas quidem sunt id nam
+                                            delectus debitis pariatur fugiat repudiandae facilis deleniti ad
+                                            dignissimos.</p></div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab13" data-toggle="tab">Tab 1</a></li>
+                                        <li><a href="#tab14" data-toggle="tab">Tab 2</a></li>
+                                        <li><a href="#tab15" data-toggle="tab">Tab 3</a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- End .widget-content --> </div><!-- End .widget -->
+                        <div class="gap20"></div>
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Right Tabs in widget box</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content noPadding">
+                                <div class="tabbable tabs-right">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab16" data-toggle="tab">Tab 1</a></li>
+                                        <li><a href="#tab17" data-toggle="tab">Tab 2</a></li>
+                                        <li><a href="#tab18" data-toggle="tab">Tab 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab16"><p>Raw denim you probably haven't heard
+                                            of them jean shorts Austin, accusamus mcsweeney's marfa nulla single-origin
+                                            coffee, ethical wes anderson tofu before they sold out </p></div>
+                                        <div class="tab-pane" id="tab17"><p>Food truck fixie locavore, accusamus
+                                            mcsweeney's marfa nulla single-origin coffee squid,lomo retro fanny pack
+                                            lo-fi farm-to-table readymade. </p></div>
+                                        <div class="tab-pane" id="tab18"><p>Etsy mixtape wayfarers, ethical wes anderson
+                                            tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi
+                                            farm-to-table readymade. </p></div>
+                                    </div>
+                                </div>
+                            </div><!-- End .widget-content --> </div><!-- End .widget --> </div><!-- End .span6 -->
+                </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="page-header"><h4>Accordion</h4></div>
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-parent="#accordion2" href="#collapseOne">
+                                    Collapsible Group Item #1 </a></div>
+                                <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+                                    <div class="accordion-inner"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </div>
+                                </div>
+                            </div><!-- End .accordion-group -->
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-parent="#accordion2" href="#collapseTwo">
+                                    Collapsible Group Item #2 </a></div>
+                                <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+                                    <div class="accordion-inner"> Curabitur pulvinar magna a risus pulvinar mollis. Duis
+                                        a est odio. Vivamus dui dui, consectetur vitae cursus dignissim, facilisis nec
+                                        nulla. Sed laoreet fermentum sem, ut aliquam dui imperdiet nec. Suspendisse
+                                        vitae erat enim. Morbi congue aliquam lectus, at commodo purus dapibus nec.
+                                        Nullam sodales fermentum aliquet. Nunc quis ligula enim. Maecenas metus risus,
+                                        egestas ut commodo eget, bibendum nec nisi
+                                    </div>
+                                </div>
+                            </div><!-- End .accordion-group -->
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-parent="#accordion2" href="#collapseThree">
+                                    Collapsible Group Item #3 </a></div>
+                                <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+                                    <div class="accordion-inner"> Donec libero nisi, volutpat eu egestas vel, molestie
+                                        vitae ante. Nam tortor risus, tincidunt et accumsan ac, vehicula eget metus.
+                                        Aenean nec nibh ac nibh dignissim feugiat ac eget tortor. Lorem ipsum dolor sit
+                                        amet, consectetur adipiscing elit. Donec iaculis auctor neque, vel varius nulla
+                                        faucibus nec. Sed quam elit, mattis blandit suscipit at, lacinia sed urna.
+                                        Suspendisse facilisis turpis vitae nisl rutrum at commodo ante euismod.
+                                    </div>
+                                </div>
+                            </div><!-- End .accordion-group --> </div><!-- End .accordion --> </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="page-header"><h4>Toggle</h4></div>
+                        <div class="accordion" id="accordion1">
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  href="#collapseOne1"> Collapsible Group Item #1 </a>
+                                </div>
+                                <div id="collapseOne1" class="accordion-body collapse" style="height: 0px; ">
+                                    <div class="accordion-inner"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </div>
+                                </div>
+                            </div><!-- End .accordion-group -->
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  href="#collapseTwo2"> Collapsible Group Item #2 </a>
+                                </div>
+                                <div id="collapseTwo2" class="accordion-body collapse" style="height: 0px; ">
+                                    <div class="accordion-inner"> Curabitur pulvinar magna a risus pulvinar mollis. Duis
+                                        a est odio. Vivamus dui dui, consectetur vitae cursus dignissim, facilisis nec
+                                        nulla. Sed laoreet fermentum sem, ut aliquam dui imperdiet nec. Suspendisse
+                                        vitae erat enim. Morbi congue aliquam lectus, at commodo purus dapibus nec.
+                                        Nullam sodales fermentum aliquet. Nunc quis ligula enim. Maecenas metus risus,
+                                        egestas ut commodo eget, bibendum nec nisi.
+                                    </div>
+                                </div>
+                            </div><!-- End .accordion-group -->
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  href="#collapseThree3"> Collapsible Group Item #3 </a>
+                                </div>
+                                <div id="collapseThree3" class="accordion-body collapse" style="height: 0px; ">
+                                    <div class="accordion-inner"> Donec libero nisi, volutpat eu egestas vel, molestie
+                                        vitae ante. Nam tortor risus, tincidunt et accumsan ac, vehicula eget metus.
+                                        Aenean nec nibh ac nibh dignissim feugiat ac eget tortor. Lorem ipsum dolor sit
+                                        amet, consectetur adipiscing elit. Donec iaculis auctor neque, vel varius nulla
+                                        faucibus nec. Sed quam elit, mattis blandit suscipit at, lacinia sed urna.
+                                        Suspendisse facilisis turpis vitae nisl rutrum at commodo ante euismod.
+                                    </div>
+                                </div>
+                            </div><!-- End .accordion-group --> </div><!-- End .accordion --> </div><!-- End .span6 -->
+                </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-settings"></i></div>
+                                <h4>JQuery Sliders</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content">
+                                <form class="form-horizontal">
+                                    <div class="control-group"><label class="control-label" for="slider">Simple
+                                        slider</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="slider1">With 20
+                                        increments</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider1" class="slider"></div>
+                                            <input type="text" id="amount"
+                                                   style="border:0; color:#f40a0a; font-weight:bold; box-shadow:none; background:none;filter:none;"/>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="rangeslider">Range
+                                        slider</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-range" class="slider"></div>
+                                            <input type="text" id="amount1"
+                                                   style="border:0; color:#f40a0a; font-weight:bold; box-shadow:none; background:none;filter:none;"/>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="minimum">With
+                                        minimum</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-range-min" class="slider"></div>
+                                            <input type="text" id="amount2"
+                                                   style="border:0; color:#f40a0a; font-weight:bold; box-shadow:none;background:none;filter:none;"/>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="maximum">With
+                                        maximum</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-range-max" class="slider"></div>
+                                            <input type="text" id="amount3"
+                                                   style="border:0; color:#f40a0a; font-weight:bold; box-shadow:none;background:none;filter:none;"/>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="vertical">Vertical
+                                        sliders</label>
+                                        <div class="controls controls-row">
+                                            <div id="eq"><span>88</span> <span>77</span> <span>55</span> <span>33</span>
+                                                <span>40</span> <span>45</span> <span>70</span></div>
+                                        </div>
+                                    </div><!-- End .control-group --> </form>
+                            </div><!-- End .widget-content --> </div><!-- End .widget --> </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-settings"></i></div>
+                                <h4>Range slider</h4> <a href="#" class="minimize"></a></div><!-- End .widget-title -->
+                            <div class="widget-content">
+                                <form class="form-horizontal">
+                                    <div class="control-group"><label class="control-label" for="slider">Basic
+                                        slider</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-basic" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="edit">Edit range
+                                        slider</label>
+                                        <div class="controls controls-row">
+                                            <div id="edit-range-slider" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="date">Date range
+                                        slider</label>
+                                        <div class="controls controls-row">
+                                            <div id="date-range-slider" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="arrows">Without
+                                        arrows</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-noarrow" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="hideshow">Hide/show
+                                        labels</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-labels" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="hideshow">Custom
+                                        formatter</label>
+                                        <div class="controls controls-row">
+                                            <div id="slider-formatter" class="slider"></div>
+                                        </div>
+                                    </div><!-- End .control-group --> </form>
+                            </div><!-- End .widget-content --> </div><!-- End .widget --> </div><!-- End .span6 -->
+                </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Progress bars</h4> <a href="#" class="minimize"></a></div><!-- End .widget-title -->
+                            <div class="widget-content">
+                                <form class="form-horizontal">
+                                    <div class="control-group"><label class="control-label" for="progress">JQuery UI
+                                        bar</label>
+                                        <div class="controls controls-row">
+                                            <div id="progressbar"></div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="progress">Bootstrap
+                                        bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress tip" title="60%">
+                                                <div class="bar" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="progress">Bootstrap
+                                        mini bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-mini tip" title="60%">
+                                                <div class="bar" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="stripped">Bootstrap
+                                        stripped bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-striped tip" title="20%">
+                                                <div class="bar" style="width: 20%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="animated">Bootstrap
+                                        animated bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-striped active tip" title="40%">
+                                                <div class="bar" style="width: 40%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="info">Bootstrap info
+                                        bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-info tip" title="40%">
+                                                <div class="bar" style="width: 40%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="success">Bootstrap
+                                        success bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-success tip" title="50%">
+                                                <div class="bar" style="width: 50%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="danger">Bootstrap
+                                        danger bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-danger tip" title="60%">
+                                                <div class="bar" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="warning">Bootstrap
+                                        warning bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress progress-warning tip" title="69%">
+                                                <div class="bar" style="width: 69%;"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="stacked">Stacked
+                                        bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="progress">
+                                                <div class="bar bar-success tip" style="width: 35%" title="35%"></div>
+                                                <div class="bar bar-info tip" style="width: 20%" title="20%"></div>
+                                                <div class="bar bar-danger tip" style="width: 10%" title="10%"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group --> </form>
+                            </div><!-- End .widget-content --> </div><!-- End .widget --> </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Animated progress bars</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content">
+                                <form class="form-horizontal">
+                                    <div class="control-group"><label class="control-label" for="animated_bar">Animated
+                                        bar</label>
+                                        <div class="controls controls-row">
+                                            <div id="progress1">
+                                                <div class="pbar"></div>
+                                                <span class="percent1"></span>
+                                                <div class="elapsed"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="withdelay">With delay
+                                        start</label>
+                                        <div class="controls controls-row">
+                                            <div id="progress2">
+                                                <div class="pbar"></div>
+                                                <span class="percent1"></span>
+                                                <div class="elapsed"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="updating">Updating
+                                        every 2 sec</label>
+                                        <div class="controls controls-row">
+                                            <div id="progress3">
+                                                <div class="pbar"></div>
+                                                <span class="percent1"></span>
+                                                <div class="elapsed"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group -->
+                                    <div class="control-group"><label class="control-label" for="field name">Circular
+                                        progress bar</label>
+                                        <div class="controls controls-row">
+                                            <div class="circular-bar">
+                                                <div class="items">
+                                                    <div class="percentage" data-percent="100"><span>100</span>%</div>
+                                                </div>
+                                                <div class="items">
+                                                    <div class="percentage-red" data-percent="78"><span>78</span>%</div>
+                                                </div>
+                                                <div class="items">
+                                                    <div class="percentage-green" data-percent="42"><span>42</span>%
+                                                    </div>
+                                                </div>
+                                                <div class="items">
+                                                    <div class="percentage-gray" data-percent="17"><span>17</span>%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End .control-group --> </form>
+                            </div><!-- End .widget-content --> </div><!-- End .widget -->
+                        <div class="gap20"></div>
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Stats buttons</h4> <a href="#" class="minimize"></a></div><!-- End .widget-title -->
+                            <div class="widget-content center">
+                                <div class="stats-buttons">
+                                    <ul class="unstyled">
+                                        <li class="center"><a href="#" class="clearfix"> <span class="icon green"><i
+                                                class="icon24 i-file-8"></i></span> <span class="number">1276</span>
+                                            <span class="txt">page views</span> </a></li>
+                                        <li class="center"><a href="#" class="clearfix"> <span class="icon blue"><i
+                                                class="icon24 i-point-up"></i></span> <span class="number">72</span>
+                                            <span class="txt">click-throughs</span> </a></li>
+                                        <li class="center"><a href="#" class="clearfix"> <span class="icon yellow"><i
+                                                class="icon24 i-eye-2"></i></span> <span class="number">72</span> <span
+                                                class="txt">ad impressions</span> </a></li>
+                                        <li class="center"><a href="#" class="clearfix"> <span class="icon gray"><i
+                                                class="icon24 i-envelop-2"></i></span> <span class="number">103</span>
+                                            <span class="txt">newsletter registred</span> </a></li>
+                                        <li class="center"><a href="#" class="clearfix"> <span class="icon"><i
+                                                class="icon24 i-coin"></i></span> <span class="number"><small>$</small>2,015</span>
+                                            <span class="txt">campaign value</span> </a></li>
+                                        <li class="center"><a href="#" class="clearfix"> <span class="icon green"><i
+                                                class="icon24 i-user-plus"></i></span> <span class="number">126</span>
+                                            <span class="txt">users registred</span> </a></li>
+                                    </ul>
+                                </div><!-- End .stats-buttons -->
+                                <div class="gap20"></div>
+                                <div class="vital-stats">
+                                    <ul>
+                                        <li><a href="#">
+                                            <div class="item">
+                                                <div class="icon"><i class="i-calendar"></i></div>
+                                                <span class="percent">8</span> <span class="txt">Events</span></div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="item">
+                                                <div class="icon blue"><i class="i-basket"></i></div>
+                                                <span class="percent">12</span> <span class="txt">Orders</span></div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="item">
+                                                <div class="icon red"><i class="i-clipboard-4"></i></div>
+                                                <span class="percent">5</span> <span class="txt">tasks</span></div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="item">
+                                                <div class="icon green"><i class="i-download-2"></i></div>
+                                                <span class="percent">1134</span> <span class="txt">Downloads</span>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="item">
+                                                <div class="icon yellow"><i class="i-search-3"></i></div>
+                                                <span class="percent">8</span> <span class="txt">Searches</span></div>
+                                        </a></li>
+                                        <li><a href="#">
+                                            <div class="item">
+                                                <div class="icon orange"><i class="i-temperature"></i></div>
+                                                <span class="percent">27%</span> <span class="txt">Site overload</span>
+                                            </div>
+                                        </a></li>
+                                    </ul>
+                                </div><!-- End .vital-stats --> </div><!-- End .widget-content --> </div>
+                        <!-- End .widget --> </div><!-- End .span6 --> </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-spinner-3"></i></div>
+                                <h4>Ajax loaders</h4> <a href="#" class="minimize"></a></div><!-- End .widget-title -->
+                            <div class="widget-content"><img src="images/preloaders/blue/1.gif" class="gap-right15">
+                                <img src="images/preloaders/blue/2.gif" class="gap-right15"> <img
+                                        src="images/preloaders/blue/3.gif" class="gap-right15"> <img
+                                        src="images/preloaders/blue/4.gif" class="gap-right15"> <img
+                                        src="images/preloaders/blue/5.gif" class="gap-right15"> <img
+                                        src="images/preloaders/blue/6.gif" class="gap-right15"> <img
+                                        src="images/preloaders/blue/7.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/1.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/2.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/3.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/4.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/5.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/6.gif" class="gap-right15"> <img
+                                        src="images/preloaders/dark/7.gif" class="gap-right15"></div>
+                            <!-- End .widget-content --> </div><!-- End .widget -->
+                        <div class="gap20"></div>
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-bubble-2"></i></div>
+                                <h4>Dialogs</h4> <a href="#" class="minimize"></a></div><!-- End .widget-title -->
+                            <div class="widget-content center"><a href="#" class="btn gap-right20" id="openDialog">Show
+                                dialog</a> <a href="#" class="btn gap-right20" id="openModalDialog">Show Modal
+                                dialog</a> <a href="#myModal" class="btn gap-right20" data-toggle="modal">Launch
+                                Boostrap Modal</a> <!-- ui dialog -->
+                                <div id="dialog" title="Dialog Title" class="dialog"><p>Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat.</p></div> <!-- ui modal dialog -->
+                                <div id="modal" title="Dialog Title" class="dialog"><p>Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    nisi ut aliquip ex ea commodo consequat.</p></div> <!-- Boostrap modal dialog -->
+                                <div id="myModal" class="modal hide fade" style="display: none; ">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><i
+                                                class="icon16 i-close-2"></i></button>
+                                        <h4>Modal Heading</h4></div>
+                                    <div class="modal-body">
+                                        <div class="paddingT15 paddingB15"><h4>Text in a modal</h4>
+                                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                                lacinia odio sem.</p> <h4>Popover in a modal</h4>
+                                            <p>This <a href="#" class="btn popover-test"
+                                                       data-content="And here's some amazing content. It's very engaging. right?"
+                                                       data-original-title="A Title">button</a> should trigger a popover
+                                                on hover.</p> <h4>Tooltips in a modal</h4>
+                                            <p><a href="#" class="tip" title="Tooltip">This link</a> and <a href="#"
+                                                                                                            class="tip"
+                                                                                                            title="Tooltip">that
+                                                link</a> should have tooltips on hover.</p>
+                                            <hr/>
+                                            <h4>Overflowing text to show optional scrollbar</h4>
+                                            <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>.
+                                                Watch it overflow with all this extra lorem ipsum text we've included.
+                                            </p>
+                                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                                                consectetur ac, vestibulum at eros.</p>
+                                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                                                consectetur ac, vestibulum at eros.</p>
+                                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                                                consectetur ac, vestibulum at eros.</p>
+                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                                auctor.</p>
+                                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
+                                                magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
+                                                ullamcorper nulla non metus auctor fringilla.</p></div>
+                                    </div>
+                                    <div class="modal-footer"><a href="#" class="btn" data-dismiss="modal">Close</a> <a
+                                            href="#" class="btn btn-primary">Save changes</a></div>
+                                </div>
+                            </div><!-- End .widget-content --> </div><!-- End .widget -->
+                        <div class="gap20"></div>
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-cube"></i></div>
+                                <h4>Notify messages</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content center"><a href="#" class="notice btn btn-inverse gap10">Regular
+                                notice</a> <a href="#" class="success btn btn-success gap10">Success notice</a> <a
+                                    href="#" class="error btn btn-danger gap10">Error notice</a> <a href="#"
+                                                                                                    class="info btn btn-info gap10">Info
+                                notice</a> <a href="#" class="sticky btn gap10">Sticky notice</a> <a href="#"
+                                                                                                     class="gray btn gap10">Gray
+                                theme</a> <a href="#" class="headmsg btn gap10">With header</a> <a href="#"
+                                                                                                   class="top-left btn gap10">Top
+                                left position</a> <a href="#" class="bottom-left btn gap10">Bottom left position</a> <a
+                                    href="#" class="bottom-right btn gap10">Bottom right position</a> <a href="#"
+                                                                                                         class="top-center btn gap10">Top
+                                center position</a></div><!-- End .widget-content --> </div><!-- End .widget --> </div>
+                    <!-- End .span6 -->
+                    <div class="span6">
+                        <div class="widget">
+                            <div class="widget-title">
+                                <div class="icon"><i class="icon20 i-bubble-2"></i></div>
+                                <h4>Tooltips and popovers</h4> <a href="#" class="minimize"></a></div>
+                            <!-- End .widget-title -->
+                            <div class="widget-content center">
+                                <div class="page-header"><h4>Boostrap tooltip</h4></div>
+                                <a href="#" class="btn gap-right10 tip" title="Tooltip on top">Tooltip on top</a> <a
+                                    href="#" class="btn gap-right10 tipR" title="Tooltip on right">Tooltip on right</a>
+                                <a href="#" class="btn gap-right10 tipB" title="Tooltip on bottom">Tooltip on bottom</a>
+                                <a href="#" class="btn gap-right10 tipL" title="Tooltip on left">Tooltip on left</a>
+                                <div class="gap20"></div>
+                                <div class="page-header">
+                                    <h4>Popovers
+                                        <small>click for action</small>
+                                    </h4>
+                                </div>
+                                <a href="#" class="btn btn-danger gap-right10" data-toggle="popover"
+                                   data-placement="top"
+                                   data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title=""
+                                   data-original-title="Popover on top">Popover on top</a> <a href="#"
+                                                                                              class="btn btn-success gap-right10"
+                                                                                              data-toggle="popover"
+                                                                                              data-placement="right"
+                                                                                              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                                                                              title=""
+                                                                                              data-original-title="Popover on right">Popover
+                                on right</a> <a href="#" class="btn btn-danger gap-right10" data-toggle="popover"
+                                                data-placement="bottom"
+                                                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                                title="" data-original-title="Popover on bottom">Popover on bottom</a>
+                                <a href="#" class="btn btn-primary gap-right10" data-toggle="popover"
+                                   data-placement="left"
+                                   data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title=""
+                                   data-original-title="Popover on left">Popover on left</a></div>
+                            <!-- End .widget-content --> </div><!-- End .widget --> </div><!-- End .span6 --> </div>
+                <!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="page-header"><h4>Just Well</h4></div>
+                        <div class="well"> Look, I'm in a well!</div>
+                        <div class="page-header"><h4>Large Well</h4></div>
+                        <div class="well well-large"> Look, I'm in a large well!</div>
+                        <div class="page-header"><h4>Small Well</h4></div>
+                        <div class="well well-small"> Look, I'm in a small well!</div>
+                    </div><!-- End .span6 -->
+                    <div class="span6">
+                        <div class="page-header"><h4>Basic pills</h4></div>
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Messages</a></li>
+                        </ul>
+                        <div class="page-header"><h4>Stacked pills</h4></div>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Messages</a></li>
+                        </ul>
+                    </div><!-- End .span6 --> </div><!-- End .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="page-header"><h4>Pagination</h4></div>
+                        <div class="center">
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href="#">&larr; Previous</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">Next &rarr;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- End .span4 -->
+                    <div class="span4">
+                        <div class="page-header"><h4>Pager</h4></div>
+                        <ul class="pager">
+                            <li><a href="#">Previous</a></li>
+                            <li><a href="#">Next</a></li>
+                        </ul>
+                    </div><!-- End .span4 -->
+                    <div class="span4">
+                        <div class="page-header"><h4>Pager with aligned links</h4></div>
+                        <ul class="pager">
+                            <li class="previous"><a href="#">&larr; Older</a></li>
+                            <li class="next"><a href="#">Newer &rarr;</a></li>
+                        </ul>
+                    </div><!-- End .span4 --> </div><!-- End .row-fluid --> </div> <!-- End .container-fluid --> </div>
+        <!-- End .wrapper --> </section>
+</div><!-- End .main --> </body>
+</html>
